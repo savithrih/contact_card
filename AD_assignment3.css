@@ -1,0 +1,16 @@
+button
+{
+margin-top: 20px;
+}
+#new_contact_card button
+{
+	width:130px;
+	height:100px;
+	margin-top: 40px;
+	background-color: orange;
+	margin-left: 50px;
+}
+.desc
+{
+	 display: none;
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<title>contact_card</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="AD_assignment3.css">
+	<script type="text/javascript" src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script>
+	$(document).ready(function()
+	{
+		$('#contact').submit(function()
+	{
+       $('#new_contact_card').append(" <div class='contacts_card'>"+"<button>"+"<p class='info'>"+$('#firstname').val()+" "+$('#lastname').val()+"</br>"+"<small >Click here for description</small>"+"</p>"+"<p class='desc'>"+$('#description').val()+"</p>"+"</button>"+"</div>");
+           return false;
+	});
+		$('#new_contact_card').on('click','.contacts_card',function()
+		{
+  
+            $(this).find('.info').toggle();
+			$(this).find('.desc').toggle();  
+		});
+		
+	});	
+	</script>
+</head>
+<body>
+    <form id ="contact">
+    	<p>First Name:<input type="text" id ="firstname"></p>
+    	<p>Last Name:<input type="text" id ="lastname"></p>
+    	<p>Description:</p>
+    	<textarea id="description"form ="contact" rows="4" cols="30" placeholder="Enter Description"></textarea><br>
+    	 <input type="submit" value="Add Users">
+    </form>   
+       <div id ="new_contact_card">
+           </div>
+</body>
+</html>
